@@ -1,0 +1,23 @@
+.BirthdayContainer {
+    display: flex;
+    align-items: center;
+    height: 38px;
+
+    .BirthdayName {
+        flex-grow: 4;
+    }
+
+    .HideBirthdayBtn {
+        display: none;        
+    }
+
+    &:hover {
+        .HideBirthdayBtn {
+            display: inline;        
+        }
+    }
+
+    .Light-Text {
+        font-weight: 300;
+    }
+}
