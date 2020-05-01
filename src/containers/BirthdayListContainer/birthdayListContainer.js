@@ -11,18 +11,23 @@ class BirthdayListContainer extends Component {
             { id: 2, name: 'Francis Bacon', date: '10 December', hidden: true },
             { id: 3, name: 'Per Wahlstedt', date: '14 Juni', hidden: false },
             { id: 4, name: 'Lora Merkel', date: '14 Juli', hidden: false },
-        ]
+        ],
+        editMode: false
     }
 
-    hideBirthdayHandler = (id) => {        
+    toggleBirthdayVisibilityHandler = (id) => {        
         const updatedBirthdays = [
             ...this.state.birthdays
         ];
 
         var birthdayToHide = updatedBirthdays.find(birthday => birthday.id === id);
-        birthdayToHide.hidden = true;
+        birthdayToHide.hidden = !birthdayToHide.hidden;
         
         this.setState( { birthdays: updatedBirthdays } );
+    }
+
+    toggleEditModeHandler = () => {        
+        this.setState( { editMode: !this.state.editMode } );
     }
 
     render () {
@@ -34,7 +39,9 @@ class BirthdayListContainer extends Component {
             <Aux>
                 <BirthdayList
                     birthdays={this.state.birthdays}
-                    onBirthdayHidden={this.hideBirthdayHandler} />
+                    isEditMode={this.state.editMode}
+                    onToggleBirthdayVisibility={this.toggleBirthdayVisibilityHandler}
+                    onToggleEditMode={this.toggleEditModeHandler} />
             </Aux>
         );
     }

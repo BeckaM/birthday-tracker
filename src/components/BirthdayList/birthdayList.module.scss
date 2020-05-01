@@ -1,0 +1,26 @@
+.BirthdayList {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    &.edit {
+        .hidden {
+            display: block;
+            color: #6c757d;
+
+            button {
+                color: #6c757d;
+            }
+        }
+    }
+}
