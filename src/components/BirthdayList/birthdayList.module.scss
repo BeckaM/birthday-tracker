@@ -16,7 +16,8 @@
     &.edit {
         .hidden {
             display: block;
-            color: #6c757d;
+            text-decoration: line-through;
+            background-color: #f1f6fa;
 
             button {
                 color: #6c757d;

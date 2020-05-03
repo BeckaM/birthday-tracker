@@ -11,10 +11,10 @@ const birthday = (props) => {
 
     const renderHideShowButton = () => {
         if (props.isEditMode && props.hidden){
-            return (<IconButton onClick={props.toggleVisibility} icon={faEye} ariaLabel="Show birthday for person"></IconButton>);
+            return (<IconButton classes={styles.HideShowBirthdayBtn} onClick={props.toggleVisibility} icon={faEye} ariaLabel="Show birthday for person"></IconButton>);
         }
         else if (props.isEditMode && !props.hidden) {
-            return (<IconButton onClick={props.toggleVisibility} icon={faEyeSlash} ariaLabel="Hide birthday for person"></IconButton>);
+            return (<IconButton classes={styles.HideShowBirthdayBtn} onClick={props.toggleVisibility} icon={faEyeSlash} ariaLabel="Hide birthday for person"></IconButton>);
         }
     }
 

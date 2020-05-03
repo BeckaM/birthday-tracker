@@ -7,12 +7,12 @@
         flex-grow: 4;
     }
 
-    .HideBirthdayBtn {
+    .HideShowBirthdayBtn {
         display: none;        
     }
 
     &:hover {
-        .HideBirthdayBtn {
+        .HideShowBirthdayBtn {
             display: inline;        
         }
     }
